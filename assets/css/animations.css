@@ -1,0 +1,151 @@
+
+/* =====================================================
+   ELENA · ANIMACIONES
+   Transiciones y efectos visuales
+===================================================== */
+
+/* =====================================================
+   CORAZONES FLOTANTES
+===================================================== */
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .12;
+    }
+
+    85% {
+        opacity: .12;
+    }
+
+    100% {
+        transform: translateY(-15vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* =====================================================
+   LATIDO
+===================================================== */
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* =====================================================
+   ENTRADA DESDE ABAJO
+===================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   APARICIÓN SUAVE
+===================================================== */
+
+@keyframes softAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =====================================================
+   ANIMACIÓN DE LAS PANTALLAS
+===================================================== */
+
+.story-screen.active .welcome-content,
+.story-screen.active .content-card,
+.story-screen.active .section-content,
+.story-screen.active .final-intro {
+    animation: fadeUp .7s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* =====================================================
+   ELEMENTOS DECORATIVOS
+===================================================== */
+
+.decorative-heart i {
+    animation: heartbeat 2.6s ease-in-out infinite;
+}
+
+.final-heart i {
+    animation: heartbeat 1.9s ease-in-out infinite;
+}
+
+/* =====================================================
+   ENTRADA DE LOS TEXTOS
+===================================================== */
+
+.story-screen.active .eyebrow {
+    animation: fadeUp .6s .08s both;
+}
+
+/* =====================================================
+   ENTRADA DE LOS BOTONES
+===================================================== */
+
+.story-screen.active .primary-button {
+    animation: fadeUp .65s .25s both;
+}
+
+/* =====================================================
+   ELEMENTOS DINÁMICOS
+===================================================== */
+
+.memory-experience {
+    animation: softAppear .65s ease both;
+}
+
+/* =====================================================
+   INTERACCIONES
+===================================================== */
+
+.primary-button,
+.sound-button,
+.back-button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.primary-button:active {
+    transform: scale(.98);
+}
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

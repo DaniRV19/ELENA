@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4b172b">
+
+    <title>Elena | Una historia especial</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Corazón blanco de bienvenida -->
+    <style>
+        .decorative-heart {
+            background: var(--burgundy);
+            color: #ffffff;
+        }
+
+        .decorative-heart i {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fondo decorativo -->
+    <div class="ambient-background"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Controles superiores -->
+    <header class="top-controls">
+        <div class="brand">
+            <span class="brand-heart">♥</span>
+            <span>ELENA</span>
+        </div>
+
+        <button class="sound-button" id="soundToggle" aria-label="Activar o silenciar sonidos">
+            <i class="bi bi-volume-mute-fill"></i>
+        </button>
+    </header>
+
+    <!-- Progreso -->
+    <div class="story-progress">
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span id="progressText">01 / 04</span>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="story-container">
+
+        <!-- PANTALLA 1: BIENVENIDA -->
+        <section class="story-screen active" data-screen="0">
+
+            <div class="welcome-content">
+
+                <div class="decorative-heart">
+                    <i class="bi bi-heart-fill"></i>
+                    <span></span>
+                </div>
+
+                <p class="eyebrow">UNA PEQUEÑA SORPRESA</p>
+
+                <h1 class="main-title">
+                    Hola,<br>
+                    <span>Elena.</span>
+                </h1>
+
+                <div class="title-divider">
+                    <span></span>
+                    <i class="bi bi-flower1"></i>
+                    <span></span>
+                </div>
+
+                <p class="welcome-description">
+                    He preparado algo especial para ti.
+                    Espero que te guste tanto como a mí
+                    me ha gustado prepararlo.
+                </p>
+
+                <button class="primary-button" data-next>
+                    Comenzar nuestra historia
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+                <p class="bottom-note">Hecho con mucho cariño ♥</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANTALLA 2: INTRODUCCIÓN -->
+        <section class="story-screen" data-screen="1">
+
+            <div class="content-card intro-card">
+
+                <div class="section-icon">
+                    <i class="bi bi-envelope-heart"></i>
+                </div>
+
+                <p class="eyebrow">ANTES DE EMPEZAR...</p>
+
+                <h2 class="section-title">
+                    No sé muy bien cómo empezar esto,
+                    <em>pero sí por qué lo hago.</em>
+                </h2>
+
+                <div class="small-divider"></div>
+
+                <p class="body-text">
+                    A veces hay cosas que cuesta explicar con palabras.
+                    Y otras veces simplemente apetece hacer algo
+                    diferente para alguien especial.
+                </p>
+
+                <p class="body-text">
+                    Por eso he querido preparar este pequeño rincón.
+                    Un lugar donde guardar momentos, conservar recuerdos
+                    y compartir contigo algo que llevo tiempo
+                    queriendo decirte.
+                </p>
+
+                <p class="signature">Con cariño, para ti.</p>
+
+                <button class="primary-button" data-next>
+                    Quiero verlo
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANTALLA 3: RECUERDOS -->
+        <section class="story-screen" data-screen="2">
+
+            <div class="section-content">
+
+                <p class="eyebrow">PEQUEÑOS GRANDES MOMENTOS</p>
+
+                <h2 class="section-title">
+                    Una historia llena de
+                    <em>recuerdos.</em>
+                </h2>
+
+                <p class="body-text">
+                    Hay momentos que merecen quedarse para siempre.
+                    Y quiero que este sea un lugar para guardarlos.
+                </p>
+
+                <div class="memory-placeholder">
+
+                    <div class="polaroid">
+                        <div class="polaroid-photo">
+                            <i class="bi bi-camera"></i>
+                            <span>Nuestra primera foto</span>
+                        </div>
+
+                        <p>Un recuerdo que todavía está por llegar...</p>
+                    </div>
+
+                    <div class="memory-decoration">♥</div>
+
+                </div>
+
+                <p class="muted-note">
+                    Este álbum irá creciendo con cada nuevo momento.
+                </p>
+
+                <button class="primary-button" data-next>
+                    Seguir descubriendo
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANTALLA 4: SORPRESAS Y CIERRE -->
+        <section class="story-screen" data-screen="3">
+
+            <div class="content-card surprise-card">
+
+                <div class="section-icon">
+                    <i class="bi bi-gift"></i>
+                </div>
+
+                <p class="eyebrow">UNA PEQUEÑA SORPRESA PARA TI</p>
+
+                <h2 class="section-title">
+                    Todavía quedan
+                    <em>cosas por descubrir.</em>
+                </h2>
+
+                <p class="body-text">
+                    He preparado algunas pequeñas sorpresas
+                    para que esta historia también tenga
+                    momentos divertidos.
+                </p>
+
+                <div class="surprise-box">
+                    <i class="bi bi-stars"></i>
+                    <span>Lo mejor está en todos esos momentos que nos quedan por vivir...</span>
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <div class="small-divider"></div>
+
+                <p class="signature">
+                    Gracias por formar parte de esta historia. ♥
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Navegación inferior -->
+    <footer class="story-footer">
+
+        <button class="back-button" id="backButton" disabled>
+            <i class="bi bi-arrow-left"></i>
+            Anterior
+        </button>
+
+        <div class="step-indicators" id="stepIndicators">
+            <span class="step active"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+        <span class="footer-label">UNA HISTORIA ESPECIAL</span>
+
+    </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
