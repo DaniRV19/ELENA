@@ -37,7 +37,7 @@
             status: "upcoming",
             description: "Un rato juntos que espero que se alargue.",
             detail: "Porque a veces los mejores momentos no necesitan ningún plan extraordinario.",
-            image: "",
+            image: "assets/images/FotoBar.jpeg",
             caption: "Un ratito para nosotros",
             color: "cream",
             number: "02"
